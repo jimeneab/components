@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import RigthSideBar from './components/rigthSideBar';
 import './App.css';
+import React from 'react'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" id="outer-container">
+      <div id="page-wrap">
+        <h1>Esta es la pagina pricipal.</h1>
+        <h2>Este es el subtitulo.</h2>
+        <RigthSideBar></RigthSideBar>
+      </div>
     </div>
   );
 }
