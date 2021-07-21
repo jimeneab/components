@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import {pantryData} from "../data/data";
 
 export default function CheckBoxForm(){
-  let [checked,setChecked] = useState(new Array(pantryData.length).fill())
+  let [checked,setChecked] = useState(new Array(pantryData.length).fill(false))
   let [totalCheck, setTotalCheck] = useState(0)
+
+  console.log(checked)
 
   function submit(e){}
 
   function handleOnchange(e){
     console.log(e.target.name)
-    console.log(e.target.value)
+    console.log(e.target.checked)
     checked[e.target.name] = e.target.value
-    setChecked(!checked)
+    setChecked(checked)
     console.log(checked)
   }
 
